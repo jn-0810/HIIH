@@ -7,21 +7,19 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
   
-
-      .state('tabsController', {
-    url: '/page1',
+  .state('tabsController', {
+    url: '/tabsController',
     templateUrl: 'templates/tabsController.html',
     abstract:true
   })
 
-  .state('tabsController.mainPage', {
-    url: '/home',
+  .state('tabsController.restaurant', {
+    url: '/restaurant',
     views: {
-      'tab2': {
-        templateUrl: 'templates/mainPage.html',
-        controller: 'mainPageCtrl'
+      'restaurant': {
+        templateUrl: 'templates/restaurant.html',
+        controller: 'restaurantCtrl'
       }
     }
   })
@@ -29,7 +27,7 @@ angular.module('app.routes', [])
   .state('tabsController.restaurant1', {
     url: '/r1',
     views: {
-      'tab2': {
+      'restaurant': {
         templateUrl: 'templates/restaurant1.html',
         controller: 'restaurant1Ctrl'
       }
@@ -39,7 +37,7 @@ angular.module('app.routes', [])
   .state('tabsController.restaurant2', {
     url: '/r2',
     views: {
-      'tab2': {
+      'restaurant': {
         templateUrl: 'templates/restaurant2.html',
         controller: 'restaurant2Ctrl'
       }
@@ -49,24 +47,24 @@ angular.module('app.routes', [])
   .state('tabsController.restaurant3', {
     url: '/r3',
     views: {
-      'tab2': {
+      'restaurant': {
         templateUrl: 'templates/restaurant3.html',
         controller: 'restaurant3Ctrl'
       }
     }
   })
 
-  .state('tabsController.cart', {
-    url: '/cart',
+  .state('tabsController.order', {
+    url: '/order',
     views: {
-      'tab4': {
-        templateUrl: 'templates/cart.html',
-        controller: 'cartCtrl'
+      'order': {
+        templateUrl: 'templates/order.html',
+        controller: 'orderCtrl'
       }
     }
   })
 
-$urlRouterProvider.otherwise('/page1/home')
+$urlRouterProvider.otherwise('/tabsController/restaurant')
 
   
 

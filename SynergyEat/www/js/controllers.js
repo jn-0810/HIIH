@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
      
-.controller('mainPageCtrl', function($scope) {
+.controller('restaurantCtrl', function($scope) {
 
 })
    
@@ -16,7 +16,7 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('cartCtrl', function($scope) {
+.controller('orderCtrl', function($scope) {
 
 })
  
